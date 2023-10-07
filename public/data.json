@@ -2,7 +2,7 @@
     {
       "id": "EVT001",
       "title": "Tech Symposium 2023",
-      "image": "Link to Event Image",
+      "image": "https://i.ibb.co/2gytZF6/ev-md1.png",
       "event_date": "November 15-17, 2023",
       "seats": 500,
       "speakers": [
@@ -27,7 +27,7 @@
     {
       "id": "EVT002",
       "title": "Leadership Excellence Summit",
-      "image": "Link to Event Image",
+      "image": "https://i.ibb.co/P4W3kYk/ev-md3.png",
       "event_date": "February 28 - March 2, 2023",
       "seats": 300,
       "speakers": [
@@ -52,8 +52,8 @@
     {
       "id": "EVT003",
       "title": "Marketing Masterclass Series",
-      "image": "Link to Event Image",
-      "event_date": "Monthly sessions starting January 2023",
+      "image": "https://i.ibb.co/zGFpj21/ev-md4.png",
+      "event_date": "January 2023",
       "seats": 100,
       "speakers": [
         {
@@ -77,7 +77,7 @@
     {
       "id": "EVT004",
       "title": "Finance Forum 2023",
-      "image": "Link to Event Image",
+      "image": "https://i.ibb.co/10Bn285/ev-md5.png",
       "event_date": "May 10-12, 2023",
       "seats": 400,
       "speakers": [
@@ -102,7 +102,7 @@
     {
       "id": "EVT005",
       "title": "Product Innovation Gala",
-      "image": "Link to Event Image",
+      "image": "https://i.ibb.co/swpzZJN/ev-md6.png",
       "event_date": "September 20, 2023",
       "seats": 200,
       "speakers": [
@@ -127,7 +127,7 @@
     {
       "id": "EVT006",
       "title": "Diversity & Inclusion Seminar",
-      "image": "Link to Event Image",
+      "image": "https://i.ibb.co/P4W3kYk/ev-md3.png",
       "event_date": "June 5-6, 2023",
       "seats": 250,
       "speakers": [

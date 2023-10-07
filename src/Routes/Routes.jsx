@@ -1,6 +1,4 @@
-import {
-    createBrowserRouter,
-  } from "react-router-dom";
+import { createBrowserRouter } from "react-router-dom";
 import Root from "../Layouts/Root";
 import Home from "../Pages/Home/Home";
 
@@ -11,10 +9,11 @@ const Routes = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: <Home></Home>
-      }
-    ]
-  }
-])
+        element: <Home></Home>,
+        loader: () => fetch("/data.json"),
+      },
+    ],
+  },
+]);
 
 export default Routes;
