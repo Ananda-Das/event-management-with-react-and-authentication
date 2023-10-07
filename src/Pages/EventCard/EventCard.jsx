@@ -24,7 +24,7 @@ const EventCard = ({ event }) => {
           <h2 className="card-title text-xl font-semibold capitalize">{title}</h2>
           {/* <p>If a dog chews shoes whose shoes does he choose?</p> */}
           <div className="card-actions justify-end">
-            <button className="btn text-[#ce1446] btn-outline  w-full">Buy Now</button>
+            <button className="btn text-[#ce1446] btn-outline  w-full font-bold">View Details</button>
           </div>
         </div>
       </div>
