@@ -8,12 +8,12 @@
       "speakers": [
         {
           "name": "John Doe",
-          "image": "Link to Speaker Image 1",
+          "image": "https://i.ibb.co/MV0QM3g/event-sm4.png",
           "position": "Chief Technology Officer"
         },
         {
           "name": "Jane Smith",
-          "image": "Link to Speaker Image 2",
+          "image": "https://i.ibb.co/9ZTrxFp/event-sm2.png",
           "position": "AI Researcher"
         }
       ],
@@ -28,17 +28,17 @@
       "id": "EVT002",
       "title": "Leadership Excellence Summit",
       "image": "https://i.ibb.co/P4W3kYk/ev-md3.png",
-      "event_date": "February 28 - March 2, 2023",
+      "event_date": "March 2, 2023",
       "seats": 300,
       "speakers": [
         {
           "name": "Michael Johnson",
-          "image": "Link to Speaker Image 3",
+          "image": "https://i.ibb.co/gSh2GT1/event-sm3.png",
           "position": "Leadership Coach"
         },
         {
           "name": "Sarah Adams",
-          "image": "Link to Speaker Image 4",
+          "image": "https://i.ibb.co/MV0QM3g/event-sm4.png",
           "position": "CEO"
         }
       ],
@@ -58,12 +58,12 @@
       "speakers": [
         {
           "name": "David Brown",
-          "image": "Link to Speaker Image 5",
+          "image": "https://i.ibb.co/kqDL1rg/event-sm5.png",
           "position": "Marketing Director"
         },
         {
           "name": "Emily White",
-          "image": "Link to Speaker Image 6",
+          "image": "https://i.ibb.co/3hWhqqd/event-sm6.png",
           "position": "Digital Marketing Expert"
         }
       ],
@@ -108,12 +108,12 @@
       "speakers": [
         {
           "name": "Mark Davis",
-          "image": "Link to Speaker Image 9",
+          "image": "https://i.ibb.co/bdWz5t0/event-sm1.png",
           "position": "CEO"
         },
         {
           "name": "Lisa Anderson",
-          "image": "Link to Speaker Image 10",
+          "image": "https://i.ibb.co/9ZTrxFp/event-sm2.png",
           "position": "Product Manager"
         }
       ],
@@ -133,12 +133,12 @@
       "speakers": [
         {
           "name": "Chris Johnson",
-          "image": "Link to Speaker Image 11",
+          "image": "https://i.ibb.co/gSh2GT1/event-sm3.png",
           "position": "Diversity Advocate"
         },
         {
           "name": "Alicia Martinez",
-          "image": "Link to Speaker Image 12",
+          "image": "https://i.ibb.co/MV0QM3g/event-sm4.png",
           "position": "Inclusion Expert"
         }
       ],

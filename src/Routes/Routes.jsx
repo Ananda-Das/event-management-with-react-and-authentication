@@ -3,6 +3,7 @@ import Root from "../Layouts/Root";
 import Home from "../Pages/Home/Home";
 import Login from "../Pages/Login/Login";
 import Register from "../Pages/Register/Register";
+import EventDetails from "../Pages/EventDetails/EventDetails";
 
 const Routes = createBrowserRouter([
   {
@@ -15,13 +16,18 @@ const Routes = createBrowserRouter([
         loader: () => fetch("/data.json"),
       },
       {
+        path: "/event/:id",
+        element: <EventDetails></EventDetails>,
+        loader: () => fetch("/data.json"),
+      },
+      {
         path: "/login",
         element: <Login></Login>,
       },
       {
         path: "/register",
         element: <Register></Register>,
-      }
+      },
     ],
   },
 ]);
