@@ -5,6 +5,7 @@ import Navbar from "../Shared/Navbar";
 import { useContext, useState } from "react";
 import { AuthContext } from "../../Providers/AuthProvider";
 import toast, { Toaster } from "react-hot-toast";
+import Swal from 'sweetalert2';
 
 const Register = () => {
   const { createUser } = useContext(AuthContext);
@@ -55,6 +56,7 @@ const Register = () => {
         <h1 className="mx-auto mt-5 text-5xl text-center font-extrabold uppercase">
           Please <span className="text-[#ce1446]">Register</span>
         </h1>
+        
         {/* form-start */}
         <form onSubmit={handleRegister} className="card-body text-center lg:w-1/2 md:h-3/4 mx-auto">
           <div className="form-control">
@@ -88,8 +90,6 @@ const Register = () => {
             <button className="btn bg-[#ce1446] text-white font-bold hover:text-[#ce1446]">Register</button>
           </div>
         </form>
-        <Toaster />
-        {/* form-end */}
         <p className="text-center">
           Already have an Account ?{" "}
           <Link to="/login" className="text-blue-600 underline">

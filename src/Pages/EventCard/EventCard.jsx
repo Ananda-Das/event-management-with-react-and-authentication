@@ -25,7 +25,7 @@ const EventCard = ({ event }) => {
          
         <p className="text-white bg-[#ce1446] p-3 rounded-lg font-semibold text-xl flex justify-between items-center w-[35%] absolute left-[7px] bottom-[148px]"> <MdOutlineEventSeat></MdOutlineEventSeat>
         {seats} 
-        Seat</p>
+         <span className="ml-[2px]">Seats</span></p>
         </div>
         <div className="card-body">
           <div className="flex justify-between items-center font-normal text-gray-600">
