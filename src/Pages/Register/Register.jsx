@@ -1,14 +1,18 @@
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { useContext, useState } from "react";
 import { AuthContext } from "../../Providers/AuthProvider";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import toast, { Toaster } from "react-hot-toast";
+import { updateProfile } from "firebase/auth";
 
 const Register = () => {
   const { createUser } = useContext(AuthContext);
   const [registerError, setRegisterError] = useState("");
   const [showPassword, setShowPassword] = useState(false);
   const [success, setSuccess] = useState("");
+
+  const location = useLocation();
+  const navigate = useNavigate();
 
   const handleRegister = (e) => {
     e.preventDefault();
@@ -26,23 +30,34 @@ const Register = () => {
     setSuccess("");
 
     if (password.length < 6) {
-          setRegisterError("Password should be at least 6 characters or longer");
-          return;
-        } else if (!/[A-Z]/.test(password)) {
-          setRegisterError("Your password should have at least one upper case characters.");
-          return;
-        } else if (!/[@#$%^&+*!=]/.test(password)) {
-          setRegisterError("Your Password must contain One Special Character!");
-          return;
-        }
-
-    
-
+      setRegisterError("Password should be at least 6 characters or longer");
+      return;
+    } else if (!/[A-Z]/.test(password)) {
+      setRegisterError("Your password should have at least one upper case characters.");
+      return;
+    } else if (!/[@#$%^&+*!=]/.test(password)) {
+      setRegisterError("Your Password must contain One Special Character!");
+      return;
+    }
 
     // create user
     createUser(email, password)
       .then((result) => {
         console.log(result.user);
+        toast.success("You Registerd Successfuly");
+
+        navigate(location?.state ? location.state : "/");
+
+        // update profile info
+        updateProfile(result.user, {
+          displayName: name,
+          photoURL: photo,
+        })
+          .then(() => {
+            console.log("profile info updated");
+            window.location.reload();
+          })
+          .catch();
       })
       .catch((error) => {
         console.error(error);
@@ -92,6 +107,8 @@ const Register = () => {
           </div>
           <Toaster></Toaster>
         </form>
+        {registerError && <p className="text-red-700 text-center font-bold">{registerError}</p>}
+        {success && <p className="text-green-600">{success}</p>}
         <p className="text-center">
           Already have an Account ?{" "}
           <Link to="/login" className="text-blue-600 underline">
