@@ -7,6 +7,7 @@ import Ticket from "./Ticket";
 
 
 const Home = () => {
+    
     return (
         <div>
             <Navbar></Navbar>
