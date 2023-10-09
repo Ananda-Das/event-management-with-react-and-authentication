@@ -1,4 +1,4 @@
-import { FaEye, FaEyeSlash } from "react-icons/fa";
+import { FaEye, FaEyeSlash, FaGoogle } from "react-icons/fa";
 import { useContext, useState } from "react";
 import { AuthContext } from "../../Providers/AuthProvider";
 import { Link, useLocation, useNavigate } from "react-router-dom";
@@ -6,7 +6,7 @@ import toast, { Toaster } from "react-hot-toast";
 import { updateProfile } from "firebase/auth";
 
 const Register = () => {
-  const { createUser } = useContext(AuthContext);
+  const { createUser, signInWithGoogle } = useContext(AuthContext);
   const [registerError, setRegisterError] = useState("");
   const [showPassword, setShowPassword] = useState(false);
   const [success, setSuccess] = useState("");
@@ -65,6 +65,19 @@ const Register = () => {
       });
   };
 
+  const handleGoogleSignIn = () => {
+    signInWithGoogle()
+      .then((result) => {
+        console.log(result);
+        toast.success("You Sign in Succesfully");
+        navigate(location?.state ? location.state : "/");
+      })
+      .catch((error) => {
+        console.log(error);
+        toast.error("Registration Failed");
+      });
+  };
+
   return (
     <div>
       {/* Register-start */}
@@ -107,6 +120,14 @@ const Register = () => {
           </div>
           <Toaster></Toaster>
         </form>
+
+        <div className="lg:w-1/3 md:h-3/4 mx-auto">
+          <button onClick={handleGoogleSignIn} className="btn btn-outline w-full">
+            <FaGoogle></FaGoogle>
+            Google
+          </button>
+        </div>
+
         {registerError && <p className="text-red-700 text-center font-bold">{registerError}</p>}
         {success && <p className="text-green-600">{success}</p>}
         <p className="text-center">
