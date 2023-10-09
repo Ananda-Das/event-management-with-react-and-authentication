@@ -4,6 +4,7 @@ import { BiCalendar } from "react-icons/bi";
 import { CiLocationOn } from "react-icons/ci";
 import { BsFacebook, BsTwitter } from "react-icons/bs";
 import { BsInstagram, BsLinkedin } from "react-icons/bs";
+import { TbCurrencyTaka } from "react-icons/tb";
 import BookEvent from "./BookEvent";
 
 const EventDetails = () => {
@@ -13,7 +14,7 @@ const EventDetails = () => {
 
   const eventDetails = event.find((event) => event.id === id);
 
-  const { title, image, event_date, city, seats, description, speakers } = eventDetails;
+  const { title, image, event_date, city, seats, description, speakers, price } = eventDetails;
 
   return (
     <div>
@@ -37,6 +38,10 @@ const EventDetails = () => {
                 <div className="flex justify-between items-center gap-1">
                   <CiLocationOn></CiLocationOn>
                   {city}
+                </div>
+                <div className="flex items-center text-[#ce1446] gap-1 font-extrabold text-2xl">
+                  <TbCurrencyTaka></TbCurrencyTaka>
+                  {price} BDT.
                 </div>
               </div>
               <hr className="w-full border" />
