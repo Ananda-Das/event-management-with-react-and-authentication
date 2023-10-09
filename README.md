@@ -1,8 +1,12 @@
-# React + Vite
+# Event Management Project With React, Tailwind, Firebase
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+My Event Management project is used for Corporate Events. To make this Project I have use React.js with CSS Framwork Tailwind & daiusyui. For Authentication I have use Firebase.
 
-Currently, two official plugins are available:
+In this Project a user can use some functionality. I am describing it Below: 
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- A user can see our event services, our talented speakers, tickets price;
+- A user can eassily redirect to one page another by using Navbar.
+- To see the particular event details a user need to login themselvs into our website.
+- A user can manually register with email, name, photourl & password.
+- After succesfull registration user can login to see the event details & his profile & previous booked event list.
+- User can also Login with their exiting google account. 
