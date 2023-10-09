@@ -1,6 +1,4 @@
 import { Link, useLoaderData, useParams } from "react-router-dom";
-import Navbar from "../Shared/Navbar";
-import Footer from "../Shared/Footer";
 import { MdOutlineEventSeat } from "react-icons/md";
 import { BiCalendar } from "react-icons/bi";
 import { CiLocationOn } from "react-icons/ci";
@@ -19,7 +17,7 @@ const EventDetails = () => {
 
   return (
     <div>
-      <Navbar></Navbar>
+      
       {/* Event Details Start */}
       <div className="w-11/12 mx-auto mt-5">
         <h1 className="text-6xl font-extrabold uppercase text-center mb-5">Event Details</h1>
@@ -90,7 +88,7 @@ const EventDetails = () => {
         </div>
       </div>
       {/* Event Details End */}
-      <Footer></Footer>
+      
     </div>
   );
 };

@@ -2,27 +2,54 @@ import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../../Providers/AuthProvider";
 
-
 const Navbar = () => {
   const { user, logOut } = useContext(AuthContext);
 
   const handleSignOut = () => {
     logOut().then().catch();
   };
-    const navLinks = (
+  const navLinks = (
+    <>
+      <li className="uppercase">
+        <NavLink className={({ isActive, isPending }) => (isPending ? "pending" : isActive ? "text-[#FF444A] underline font-bold" : "")} to="/">
+          Home
+        </NavLink>
+      </li>
+      <li className="uppercase">
+        <NavLink className={({ isActive, isPending }) => (isPending ? "pending" : isActive ? "text-[#FF444A] underline font-bold" : "")} to="/about">
+          About
+        </NavLink>
+      </li>
+      <li className="uppercase">
+        <NavLink className={({ isActive, isPending }) => (isPending ? "pending" : isActive ? "text-[#FF444A] underline font-bold" : "")} to="/events">
+          Events
+        </NavLink>
+      </li>
+
+      {user ? (
         <>
           <li className="uppercase">
-            <NavLink to="/">Home</NavLink>
+            <NavLink
+              className={({ isActive, isPending }) => (isPending ? "pending" : isActive ? "text-[#FF444A] underline font-bold" : "")}
+              to="/profile"
+            >
+              Profile
+            </NavLink>
           </li>
           <li className="uppercase">
-            <NavLink to="/about">About</NavLink>
+            <NavLink
+              className={({ isActive, isPending }) => (isPending ? "pending" : isActive ? "text-[#FF444A] underline font-bold" : "")}
+              to="/booked"
+            >
+              Booked Event
+            </NavLink>
           </li>
-          <li className="uppercase"><NavLink to="/events">Events</NavLink></li>
-          <li className="uppercase"><NavLink to="/blog">Blog</NavLink></li>
-          <li className="uppercase"><NavLink to="/contact">Contact</NavLink></li>
-          
         </>
-      );
+      ) : (
+        ""
+      )}
+    </>
+  );
   return (
     <div className="navbar bg-base-100">
       <div className="navbar-start">
@@ -39,16 +66,20 @@ const Navbar = () => {
         <a className="btn btn-ghost normal-case text-xl">Event</a>
       </div>
       <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal px-1">
-          {navLinks}
-        </ul>
+        <ul className="menu menu-horizontal px-1">{navLinks}</ul>
       </div>
       <div className="navbar-end">
         {/* <Link to="/login"><a className="btn">Login</a></Link> */}
         {user ? (
-          <button onClick={handleSignOut} className="btn">
-            Sign Out
-          </button>
+          <>
+            <span className="mr-3">{user.displayName}</span>
+            <span className="mr-3 btn btn-ghost btn-circle avatar w-10 rounded-full">
+              <img src={user.photoURL} alt="" />
+            </span>
+            <button onClick={handleSignOut} className="btn">
+              Sign Out
+            </button>
+          </>
         ) : (
           <Link to="/login">
             <button className="btn">Login</button>

@@ -1,12 +1,13 @@
 import { FaEye, FaEyeSlash } from "react-icons/fa";
-import { Link } from "react-router-dom";
-import Footer from "../Shared/Footer";
-import Navbar from "../Shared/Navbar";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useContext, useState } from "react";
 import { AuthContext } from "../../Providers/AuthProvider";
+import toast, { Toaster } from "react-hot-toast";
 
 const Login = () => {
     const {signIn} = useContext(AuthContext);
+    const location = useLocation();
+    const navigate = useNavigate();
     const [showPassword, setShowPassword] = useState(false);
 
     const handleLogin = e =>{
@@ -20,15 +21,17 @@ const Login = () => {
         signIn(email, password)
         .then(result=>{
             console.log(result.user);
+            toast.success('You Successfully Loged In');
+            navigate(location?.state ? location.state : '/');
         })
         .catch(error=>{
             console.log(error);
+            toast.error(error.message);
         })
 
     }
   return (
     <div>
-      <Navbar></Navbar>
       {/* login-start */}
       <div>
         <h1 className="mx-auto mt-5 text-5xl text-center font-extrabold uppercase">
@@ -58,6 +61,7 @@ const Login = () => {
           <div className="form-control mt-6">
             <button className="btn bg-[#ce1446] text-white font-bold hover:text-[#ce1446] ">Login</button>
           </div>
+          <Toaster></Toaster>
         </form>
         {/* form-end */}
         <p className="text-center">
@@ -68,7 +72,6 @@ const Login = () => {
         </p>
       </div>
       {/* login-end */}
-      <Footer></Footer>
     </div>
   );
 };

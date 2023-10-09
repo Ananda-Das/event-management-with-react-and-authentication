@@ -1,11 +1,8 @@
 import { FaEye, FaEyeSlash } from "react-icons/fa";
-import { Link } from "react-router-dom";
-import Footer from "../Shared/Footer";
-import Navbar from "../Shared/Navbar";
 import { useContext, useState } from "react";
 import { AuthContext } from "../../Providers/AuthProvider";
+import { Link } from "react-router-dom";
 import toast, { Toaster } from "react-hot-toast";
-import Swal from 'sweetalert2';
 
 const Register = () => {
   const { createUser } = useContext(AuthContext);
@@ -15,26 +12,32 @@ const Register = () => {
 
   const handleRegister = (e) => {
     e.preventDefault();
+    console.log(e.currentTarget);
     const form = new FormData(e.currentTarget);
-    const email = form.get("email");
+
     const name = form.get("name");
     const photo = form.get("photo");
+    const email = form.get("email");
     const password = form.get("password");
+    console.log(name, photo, email, password);
 
     // reset error and success
     setRegisterError("");
     setSuccess("");
 
     if (password.length < 6) {
-      setRegisterError("Password should be at least 6 characters or longer");
-      return;
-    } else if (!/[A-Z]/.test(password)) {
-      setRegisterError("Your password should have at least one upper case characters.");
-      return;
-    } else if (!/[@#$%^&+*!=]/.test(password)) {
-      setRegisterError("Your Password must contain One Special Character!");
-      return;
-    }
+          setRegisterError("Password should be at least 6 characters or longer");
+          return;
+        } else if (!/[A-Z]/.test(password)) {
+          setRegisterError("Your password should have at least one upper case characters.");
+          return;
+        } else if (!/[@#$%^&+*!=]/.test(password)) {
+          setRegisterError("Your Password must contain One Special Character!");
+          return;
+        }
+
+    
+
 
     // create user
     createUser(email, password)
@@ -42,21 +45,19 @@ const Register = () => {
         console.log(result.user);
       })
       .catch((error) => {
-        console.log(error);
+        console.error(error);
+        toast.error(error.message);
       });
-
-    console.log(email, name, photo, password);
   };
 
   return (
     <div>
-      <Navbar></Navbar>
       {/* Register-start */}
       <div>
         <h1 className="mx-auto mt-5 text-5xl text-center font-extrabold uppercase">
           Please <span className="text-[#ce1446]">Register</span>
         </h1>
-        
+
         {/* form-start */}
         <form onSubmit={handleRegister} className="card-body text-center lg:w-1/2 md:h-3/4 mx-auto">
           <div className="form-control">
@@ -89,6 +90,7 @@ const Register = () => {
           <div className="form-control mt-6">
             <button className="btn bg-[#ce1446] text-white font-bold hover:text-[#ce1446]">Register</button>
           </div>
+          <Toaster></Toaster>
         </form>
         <p className="text-center">
           Already have an Account ?{" "}
@@ -98,7 +100,6 @@ const Register = () => {
         </p>
       </div>
       {/* Register-end */}
-      <Footer></Footer>
     </div>
   );
 };

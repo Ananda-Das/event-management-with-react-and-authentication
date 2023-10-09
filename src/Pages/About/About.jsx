@@ -1,12 +1,11 @@
-import Footer from "../Shared/Footer";
-import Navbar from "../Shared/Navbar";
+
 import aboutimg from "../../assets/Images/pexels-photo-3321791.jpeg";
 import storyimg from "../../assets/Images/story.avif";
 
 const About = () => {
   return (
     <div>
-      <Navbar></Navbar>
+      {/* <Navbar></Navbar> */}
       {/* About-start */}
       <div className="w-11/12 mx-auto mt-14">
         <div className="flex gap-16 items-center justify-around shadow-2xl p-5">
@@ -36,7 +35,7 @@ const About = () => {
         </div>
       </div>
       {/* About-end */}
-      <Footer></Footer>
+      {/* <Footer></Footer> */}
     </div>
   );
 };
