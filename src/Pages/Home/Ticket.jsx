@@ -14,7 +14,7 @@ const Ticket = () => {
       <h2 className="text-5xl text-center mb-10 font-extrabold uppercase">
         GET SPONSOR <span className="text-[#ce1446]">TICKET</span>
       </h2>
-      <div className="flex items-center justify-around gap-8">
+      <div className="flex flex-col lg:flex-row items-center justify-around gap-8">
         {/* card-start */}
         <div data-aos="fade-right" data-aos-duration="3000" className="shadow-xl w-80 text-center">
           <div className="bg-[rgb(206,20,70)] rounded-b-3xl p-5 text-2xl font-bold text-white">

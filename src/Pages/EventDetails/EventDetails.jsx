@@ -21,11 +21,11 @@ const EventDetails = () => {
       {/* Event Details Start */}
       <div className="w-11/12 mx-auto mt-5">
         <h1 className="text-6xl font-extrabold uppercase text-center mb-5">Event Details</h1>
-        <div className="grid grid-cols-3 gap-5 mt-7">
+        <div className="grid lg:grid-cols-3 grid-cols-1 gap-5 mt-7">
           <div className="col-span-2">
             <div className="w-full">
               <img className="w-full h-[400px]" src={image} alt="" />
-              <div className="flex justify-around items-center font-normal text-gray-600 mt-4">
+              <div className="flex lg:justify-around justify-between items-center font-normal text-gray-600 mt-4">
                 <div className="flex items-center justify-between gap-1">
                   <BiCalendar></BiCalendar> {event_date}
                 </div>
