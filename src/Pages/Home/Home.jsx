@@ -8,12 +8,10 @@ const Home = () => {
     
     return (
         <div>
-            {/* <Navbar></Navbar> */}
             <Banner></Banner>
             <EventCards></EventCards>
             <Speakers></Speakers>
             <Ticket></Ticket>
-            {/* <Footer></Footer> */}
         </div>
     );
 };

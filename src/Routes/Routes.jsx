@@ -9,6 +9,7 @@ import PrivateRoute from "./PrivateRoute";
 import Profile from "../Pages/Profile/Profile";
 import Booked from "../Pages/Booked/Booked";
 import Error from "../Pages/Error/Error";
+import Event from "../Pages/EventCard/Event";
 
 const Routes = createBrowserRouter([
   {
@@ -33,6 +34,20 @@ const Routes = createBrowserRouter([
       {
         path: "/about",
         element: <About></About>,
+      },
+      {
+        path: "/events",
+        element: <Event></Event>,
+        loader: () => fetch("/data.json"),
+      },
+      {
+        path: "/events/event/:id",
+        element: (
+          <PrivateRoute>
+            <EventDetails></EventDetails>
+          </PrivateRoute>
+        ),
+        loader: () => fetch("/data.json"),
       },
       {
         path: "/profile",

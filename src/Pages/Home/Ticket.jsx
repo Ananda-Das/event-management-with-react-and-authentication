@@ -16,7 +16,7 @@ const Ticket = () => {
       </h2>
       <div className="flex flex-col lg:flex-row items-center justify-around gap-8">
         {/* card-start */}
-        <div data-aos="fade-right" data-aos-duration="3000" className="shadow-xl w-80 text-center">
+        <div data-aos="fade-down" data-aos-duration="3000" className="shadow-xl w-80 text-center">
           <div className="bg-[rgb(206,20,70)] rounded-b-3xl p-5 text-2xl font-bold text-white">
             <h3 className="text-xl">Silver</h3>
             <p className="text-5xl">$ 100</p>
@@ -66,7 +66,7 @@ const Ticket = () => {
         {/* card-end */}
 
         {/* card-start */}
-        <div data-aos="fade-left" data-aos-duration="3000"  className="shadow-xl w-80 text-center">
+        <div data-aos="fade-up" data-aos-duration="3000"  className="shadow-xl w-80 text-center">
           <div className="bg-[rgb(206,20,70)] rounded-b-3xl p-5 text-2xl font-bold text-white">
             <h3 className="text-xl">Platinum</h3>
             <p className="text-5xl">$ 150</p>

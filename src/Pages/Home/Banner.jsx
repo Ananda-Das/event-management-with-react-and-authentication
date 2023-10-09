@@ -18,7 +18,7 @@ import { Autoplay, Pagination, Navigation } from "swiper/modules";
 
 const Banner = () => {
   return (
-    <>
+    <div className="bg-red-200">
       <Swiper
         spaceBetween={30}
         centeredSlides={true}
@@ -128,7 +128,7 @@ const Banner = () => {
           </div>
         </SwiperSlide>
       </Swiper>
-    </>
+    </div>
   );
 };
 
