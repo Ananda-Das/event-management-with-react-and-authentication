@@ -34,7 +34,7 @@ const Speakers = () => {
         <SwiperSlide>
           <div className="p-5 h-1/4">
             <img src={speaker1} className="w-full h-1/4" alt="" />
-            <div className="absolute text-center w-[90%] p-3 rounded-md bg-[#ce1446] text-white bottom-5">
+            <div className="lg:absolute text-center lg:w-[90%] lg:p-3 rounded-md bg-[#ce1446] text-white bottom-5">
               <h2 className="text-2xl font-bold">Jhon Doe</h2>
               <p>Marketing</p>
             </div>
@@ -43,7 +43,7 @@ const Speakers = () => {
         <SwiperSlide>
           <div className="p-5 h-1/2">
             <img src={speaker2} className="w-full h-full" alt="" />
-            <div className="absolute text-center w-[90%] p-3 rounded-md bg-[#ce1446] text-white bottom-5">
+            <div className="lg:absolute text-center lg:w-[90%] lg:p-3 rounded-md bg-[#ce1446] text-white bottom-5">
               <h2 className="text-2xl font-bold">Jane Smith</h2>
               <p>AI Researcher</p>
             </div>
@@ -52,7 +52,7 @@ const Speakers = () => {
         <SwiperSlide>
           <div className="p-5 h-1/2">
             <img src={speaker3} className="w-full h-full" alt="" />
-            <div className="absolute text-center w-[90%] p-3 rounded-md bg-[#ce1446] text-white bottom-5">
+            <div className="lg:absolute text-center lg:w-[90%] lg:p-3 rounded-md bg-[#ce1446] text-white bottom-5">
               <h2 className="text-2xl font-bold">Michael Johnson</h2>
               <p>Leadership Coach</p>
             </div>
@@ -61,7 +61,7 @@ const Speakers = () => {
         <SwiperSlide>
           <div className="p-5 h-1/2">
             <img src={speaker1} className="w-full h-full" alt="" />
-            <div className="absolute text-center w-[90%] p-3 rounded-md bg-[#ce1446] text-white bottom-5">
+            <div className="lg:absolute text-center lg:w-[90%] lg:p-3 rounded-md bg-[#ce1446] text-white bottom-5">
               <h2 className="text-2xl font-bold">Sarah Adams</h2>
               <p>CEO</p>
             </div>
@@ -70,7 +70,7 @@ const Speakers = () => {
         <SwiperSlide>
           <div className="p-5 h-full w-full">
             <img src={speaker5} className="w-full h-full" alt="" />
-            <div className="absolute text-center w-[90%] p-3 rounded-md bg-[#ce1446] text-white bottom-5">
+            <div className="lg:absolute text-center lg:w-[90%] lg:p-3 rounded-md bg-[#ce1446] text-white bottom-5">
               <h2 className="text-2xl font-bold">David Brown</h2>
               <p>Marketing Director</p>
             </div>
@@ -79,7 +79,7 @@ const Speakers = () => {
         <SwiperSlide>
           <div className="p-5 h-1/2">
             <img src={speaker6} className="w-full h-full" alt="" />
-            <div className="absolute text-center w-[90%] p-3 rounded-md bg-[#ce1446] text-white bottom-5">
+            <div className="lg:absolute text-center lg:w-[90%] lg:p-3 rounded-md bg-[#ce1446] text-white bottom-5">
               <h2 className="text-2xl font-bold">Lisa Anderson</h2>
               <p>Product Manager</p>
             </div>
